@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Tasks {
     private List<String> tasks = new ArrayList<>();
-    public int i = 0;
     Scanner scanner = new Scanner(System.in);
     int taskIndeks;
 
@@ -14,10 +13,13 @@ public class Tasks {
     public void addTask() {
         System.out.println("Wpisz swoje zadanie.");
         String task = scanner.nextLine();
-        tasks.add(i + " " + task);
+        tasks.add(task);
     }
 
     public List<String> printTask() {
+        for (int i = 0; i < tasks.size(); i++) {
+            System.out.println(tasks.indexOf(tasks.get(i)) + " " + tasks.get(i));
+        }
         return tasks;
     }
 
@@ -33,7 +35,9 @@ public class Tasks {
         taskIndeks = scanner.nextInt();
 
         System.out.println("Podaj nowy tekst zadania");
-        String userText = scanner.nextLine();
+        Scanner userTextReader = new Scanner(System.in);
+        String userText = userTextReader.nextLine();
+
         tasks.set(taskIndeks, userText);
     }
 }

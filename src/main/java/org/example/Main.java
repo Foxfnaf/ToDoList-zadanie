@@ -19,7 +19,7 @@ public class Main {
 
             switch (userChoice) {
                 case 1 -> tasks.addTask();
-                case 2 -> System.out.println(tasks.printTask());
+                case 2 -> tasks.printTask();
                 case 3 -> tasks.removeTask();
                 case 4 -> tasks.modifyTask();
             }
