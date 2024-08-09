@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
         Tasks tasks = new Tasks();
         Scanner scanner = new Scanner(System.in);
-
         int userChoice;
 
         while (true) {
@@ -18,10 +17,22 @@ public class Main {
             userChoice = scanner.nextInt();
 
             switch (userChoice) {
-                case 1 -> tasks.addTask();
-                case 2 -> tasks.printTask();
-                case 3 -> tasks.removeTask();
-                case 4 -> tasks.modifyTask();
+                case 1 -> {
+                    System.out.println();
+                    tasks.addTask();
+                }
+                case 2 -> {
+                    System.out.println();
+                    tasks.printTask();
+                }
+                case 3 -> {
+                    System.out.println();
+                    tasks.removeTask();
+                }
+                case 4 -> {
+                    System.out.println();
+                    tasks.modificationOfTask();
+                }
             }
         }
     }
