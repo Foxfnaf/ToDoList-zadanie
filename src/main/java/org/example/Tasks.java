@@ -14,12 +14,15 @@ public class Tasks {
         System.out.println("Wpisz swoje zadanie.");
         String task = scanner.nextLine();
         tasks.add(task);
+        scanner = null;
     }
 
     public List<String> printTask() {
         for (int i = 0; i < tasks.size(); i++) {
             System.out.println(tasks.indexOf(tasks.get(i)) + " " + tasks.get(i));
         }
+        scanner = null;
+        
         return tasks;
     }
 
@@ -28,6 +31,7 @@ public class Tasks {
         System.out.println("Podaj numer zadania (Możesz je sprawdzić wyświetlająć wszystkie zadania. Numery zaczynają się od 0.)");
        taskIndeks = scanner.nextInt();
         tasks.remove(taskIndeks);
+        scanner = null;
     }
 
     public void modifyTask() {
@@ -39,5 +43,6 @@ public class Tasks {
         String userText = userTextReader.nextLine();
 
         tasks.set(taskIndeks, userText);
+        scanner = null; 
     }
 }
