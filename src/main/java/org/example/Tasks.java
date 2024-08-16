@@ -20,6 +20,7 @@ public class Tasks {
         for (int i = 0; i < tasks.size(); i++) {
             System.out.println(tasks.indexOf(tasks.get(i)) + " " + tasks.get(i));
         }
+
         return tasks;
     }
 
